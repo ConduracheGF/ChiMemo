@@ -1,0 +1,176 @@
+Video 7-9
+am facut videourile obiect, interactiune si sound
+la obiect trebuie schimbate imaginile pentru fiecare obiect, la Boots implementat un timer ca sa se opreasca dupa un timp, sau sters pentru ca noi avem Shift, sau sa fie activ shiftul doar dupa ce am luat viteza si timerul sa numere cat timp apesi pe buton, exemplu poti sa l apesi timp de 60s
+la sabie sa se schimbe sprite ul mihai ca sa aiba sabia in mana plus modul de kill sa fie implementat
+la armour la fel ca la sabie, in schimb o sa fii atacat acolo scazi mai putina viata
+la potion crestem viata
+la chest ori facem design ul factory method si culegem niste cufere si ne va da el ceva random din cele de mai sus, ori putem sa l stergem si culegem obiectele la mana
+la boots de verificat viteza
+la sound de schimbat muzica, doar de tip wav
+la obiecte, exista un sunet pus, de modificat sau scos de tot
+
+Video 10
+S a facut momentan un joc tip treasure hunt, trebuie/va fi modificat pe parcurs
+la sabia tip cufar jocul se incheie, are si timer
+
+Video 11
+La personaj si harta s a facut cate o functie de setup in care se creeza obiectul stiind numele tile lui, eficientizarea codului si scurtarea randarii de la 600.000 => 900.000 ns la 400.000 => 600.000 ns
+
+Video 12
+Skip
+
+Video 13
+S a facut starea de pauza la apasarea butonului esc, lipsesc butoane pentru Resume, Settings, Quit Game
+
+Video 14
+NPC uri facute cu succes, deplasare facuta printr-un random
+
+Video 15
+Dialogul dintre personaje utilizand tasta SPACE
+Utilizarea unei stari de Dialog in GameState
+
+Video 16
+Font anime- skip
+
+Video 17
+Meniu de start cu subMeniu
+la apelul functiei drawTitleScreen trebuie vazut cum inloc de space se selecteaza butonul din meniu cu enter, space ul ne trebuie doar in joc dupa intrare
+
+Video 18
+Bara de viata este functionala
+
+Video 19
+PitHit capcana pentru scaderea vietii, posibil sa fie stearsa. Folosita pentru testarea lifeBar
+HealingPool pentru rehidratare si teleport
+
+Video 20
+La fel ca la 19 dar mai actual
+HeallingPool nu functioneaza deloc in nici o stare
+
+Video #22
+Oaia Verde apare in socuri, posibil sa fie putine poze, de reglementat
+
+Video #23
+S a implementat miscarea de atac a personajului la apasarea tastei Space.
+Nu apar toate miscarile complete. Nu executa a doua parte din tais in nici o pozitie
+Posibile modificari necesare in functia de attacking din fisierul player sau in functia de draw de verificat
+se poate sterge linia pentru tempScreenX si tempScreenY daca atacul pare ciudat, cazurile left si up functia draw , fisier  player
+daca stergi linia, sterge si unde au fost declarate tempScreenX si tempScreenY ??? de verificat necesitatea tempScreenX si tempScreenY
+poti cere detalii pentru referinte
+
+Poza Armura, Poza mers capra, cod
+
+Video #26
+S au pus messaje pentru level damage exp
+
+Video #27 & #28
+s a creat Inventarul activat prin J
+poti sa selectezi elemente prin enter si sa schimbi sabia armura, daca selectezi potiunea o sa recapeti din viata
+trebuie adaugat la baston poza cu el
+si la functia de getAttackImage trebuie adaugate imaginile cum se lupta cu bastonul
+obiectele se pot lua de pe jos si poti sa le folosesti, ma gandesc sa punem viata de utilizare pentru armura si obiecte si o data la sa se anuleze
+in felul asta putem folosi inventarul ca sa mai schimbam din obiecte, ca sa nu mai adaugam si alt tip de armura
+dar asta poate mai incolo, vedem
+
+poti sa faci videoul #29 daca ai chef, altu nu ca oricum asta te ia tot meciul daca vrei si sa te uiti la el
+daca nu, o sa fac codu maine la cce
+
+Video #29
+Am facut sa trag cu foc albastru, apasand tasta "f". Din pacate, el trage si prin garduri, si prin casa, copaci...
+Am schimbat imaginea de la sabie si cea de la baston (le-am pus fix pe cele le are in mana cand merge cu ele, ataca, etc).
+
+Video #30
+Oile trag cu arrows, dar trebuie modificat codul cumva.
+    -Idee 1:
+        Cand nu sunt atacate, nu iti fac nimic si doar se plimba, dar deodata ce le ataci, stau pe loc si fac animatia cum iau arrow-ul, il pun pe arc si trag spre tine.
+    -Idee X:
+        Daca ai tu ceva idei
+Aceeasi problema ca si la fireball, adica trec sagetile prin orice.
+Sub viata, avem un "Mana" (exact asa se numeste). El reprezinta cate fireball-uri poti sa mai tragi, pe scurt ammo.
+
+Video #31
+Am scris cod pentru pick up items, precum inima;
+Am scris cod pentru a primi obiecte, atunci cand omori sau monstrul ajunge la un anumit procent de viata
+
+Video #32 si #33 skip
+
+Video #34
+
+Am facut sa fie fullscreen si, daca vrei sa testezi care chestie iti place mai mult, fa asta:
+-intra in GamePanel, linia 197 si decomenteaza
+-sterge de la 210 la 213
+
+Am gasit un comentariu de la un abonat pentru a nu merge sacadat jocul
+-linia 94 pana la 106 e de la chinez
+-linia 108 pana la 117 de la abonat
+
+Video #35
+tabelul pentru Options Menu creat si imbinat in meniurile de pauza si de inceput de joc
+
+Video #36
+s a salvat modificarile din setari in fisierul config.txt si se realizeaza toata munca in clasa Config.java
+
+Video #37
+Moare personajul
+Meniu de GameOver
+
+Video #38
+Am facut loc in foldere pentru Nivelul 2 si 3
+tranzitia se face prin teleport in patratelul unde ti am zis ca facea inainte teleportare (2,4)
+te va trimite pe harta 2 unde nu am pus apa
+
+Video #39
+skipped
+
+Video #40
+npc ul poate sa ma urmareasca, este pus pe false momentan onPath ul
+monsters poate sa ma urmareasca pe o distanta de 20 de tile uri pe raza de actiune, daca fug mai mult de 20 ma lasa
+s a implementat un A* si poate fi desenat traseul pe care va urma sa l parcurga, momentan comentat, posibil sa fie sters acusi
+
+Video #41 (KnockBack) #42(Interactive Objects - Door Chest etc)
+skipped
+
+Video #43
+ca sa nu am 10 potiuni am redus totul la un numar in coltul din dreapta
+al imaginii cu potiunea (asta e doar unic caz, e la fel cu toate)
+
+Video #44 #45 #46
+skipped
+
+Video ul bonus: Tile Map Editor dintre #46 si #47 de facut obligatoriu, trebuie sa l faci tu
+
+Video #47
+Momentan skipped, daca vrei sa avem o harta care sa ne indice directia putem sa l facem dar avem o harta destul de mica
+nu ne este atat de util
+
+Video #48
+de uitat la comentarii in attacking - Entity (ultimele 3 minute)
+de facut ultimele 3 minute, au fost declarate variabilele, trebuie modificate valorile lor
+trebuie folosite in attacking
+
+de revizuit afisarea imaginilor la schelet in timpul jocului
+ar trebui modificata distanta pentru activarea attacking?
+
+Video #49
+Skipped
+
+Video #50
+Fisierul UI, la pause, pentru quit game cand apesi enter e prea lent, de verificat cum pot fi imbunatatite cele 3 linii dintre comentarii
+
+
+
+
+FACUTE:
+clipitul la personaje disparut
+nu mai se dubleaza numarul de monstri la apasat retry
+
+Probleme joc:
+in functia drawLayer (TileManager) si draw(Player)
+ai niste comentarii
+verifica video ul si vezi daca ne ajuta cu ceva codu chinezului astfel incat sa functioneze ideea asa cum trebuie
+https://www.youtube.com/watch?v=M5BNHsUyRYw
+
+Chestii de modificat/facut:
+Sunetul la portal
+Mersul la schelet ciudat, nu face pasi, doar ataca
+butonul quit merge lent, de optimizat
